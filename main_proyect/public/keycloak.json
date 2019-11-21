@@ -1,0 +1,14 @@
+{
+  "realm": "master",
+  "auth-server-url": "http://192.168.0.5:8088/auth",
+  "ssl-required": "external",
+  "resource": "react-front-microservice",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "836ca90c-24ee-4c03-8a9c-0bc33e3b4b49"
+  },
+  "confidential-port": 0,
+  "policy-enforcer": {
+    
+  }
+}
