@@ -1,6 +1,6 @@
 import React from 'react';
 import { StoreProvider } from '../Provider/Store';
-import { Main } from './Main';
+import { Main } from './index';
 
 export default function App() {
   return (

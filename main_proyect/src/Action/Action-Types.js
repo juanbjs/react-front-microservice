@@ -1,1 +1,2 @@
 export const SESSIONSTORE = 'SESSIONSTORE';
+export const MICROPAGEURL = 'MICROPAGEURL';
