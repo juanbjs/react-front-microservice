@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  nginx:
+      image: nginx:alpine
+      ports:
+        - 8070:80
+      volumes:
+        - ./datos/nginx/www:/var/www
+        - ./datos/nginx/conf:/etc/nginx/conf.d

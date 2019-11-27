@@ -1,1 +1,0 @@
-export { MicroFrontEnd } from './MicroFrontEnd';

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Micro-frontends using Web Components</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .intro {
+      margin: 30px 0;
+    }
+    .repo {
+      margin: 30px 0;
+      text-align: center;
+      width: 100%;
+    }
+    .card-body {
+      width: 100%;
+      height: 350px;
+    }
+    .logo {
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    .console {
+      margin-top: 20px;
+    }
+    .console h4 {
+      margin-bottom: 15px;
+      border-bottom: solid 1px #000000;
+      padding-bottom: 5px;
+    }
+    .console p {
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+
+<body onload="tellComponents()">
+
+  <div class="container">
+    <react-el  name="Hola desde react"></react-el>
+    <div class="card-body" id="react-container"></div>
+  </div>
+
+  <script>
+    function tellComponents() {
+      const name = '';
+      const reactEl = document.createElement('react-el');
+      reactEl.setAttribute('name', name);
+      reactEl.setAttribute('onHelloEvt', 'onHelloEvt');
+      reactEl.addEventListener('onHelloEvt', (e) => helloEvent('React'));
+      const reactElContainer =  document.getElementById('react-container')
+      if (reactElContainer.children.length > 0) {
+        reactElContainer.removeChild(reactElContainer.children[0]);
+      }
+    }
+
+    function helloEvent(who) {
+      logMessage(who, 'hello');
+    }
+    
+    function logMessage(source, msg) {
+      const msgContainer = document.getElementById('messages');
+      msgContainer.innerHTML += `<p><strong>${source}</strong> said ${msg}`;
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
+  <script src="http://localhost:3001/static/js/main.chunk.js"></script>
+</body>
+</html>

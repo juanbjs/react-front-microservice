@@ -1,16 +1,29 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import { MicroFrontEnd } from '../../MicroFrontEnd';
+const appendComponent = (componentName, component) => {
+  const reactElContainer = document.getElementById(componentName)
+  removeComponent(reactElContainer)
+  reactElContainer.appendChild(component);
+}
 
-const Home = () => <div>HOME</div>
+const removeComponent = (component) => {
+  if (component.children.length > 0) {
+    component.removeChild(component.children[0]);
+  }
+}
 
-const About = ({ history }) => (
-  <MicroFrontEnd 
-    history={history} 
-    path = "/about"
-  />
-);
+const Home = () => {
+  const component = document.createElement('div');
+  appendComponent('react-container',component)
+  return <div>HOME</div>
+}
+
+const About = () => {
+  const component = document.createElement('micro-front-about');
+  appendComponent('react-container',component)
+  return <div></div>
+}
 
 export function AppSwitch() {
   return (
