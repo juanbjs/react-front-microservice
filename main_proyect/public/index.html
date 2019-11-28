@@ -25,16 +25,29 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>React App</title>
+
+  <style>
+    body{
+      margin: 0;
+      overflow-x: hidden;
+    }
+    
+    #section{
+      padding: 10px;
+    }
+  </style>
 </head>
 
-<body">
+<body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <div id="react-container"></div>
+  <section id="section">
+      <div id="react-container"></div>
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
-  <script src="http://192.168.0.5:8070/about/main.js"></script>
+  <script src="http://10.5.2.188:8070/about/main.js"></script>
 </body>
 
 </html>

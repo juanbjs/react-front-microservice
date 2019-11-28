@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import { Home } from '../Home';
+
 const appendComponent = (componentName, component) => {
   const reactElContainer = document.getElementById(componentName)
   removeComponent(reactElContainer)
@@ -13,23 +15,23 @@ const removeComponent = (component) => {
   }
 }
 
-const Home = () => {
-  const component = document.createElement('div');
-  appendComponent('react-container',component)
-  return <div>HOME</div>
-}
-
 const About = () => {
   const component = document.createElement('micro-front-about');
   appendComponent('react-container',component)
   return <div></div>
 }
 
+const Main = () => {
+  const component = document.createElement('div');
+  appendComponent('react-container',component)
+  return <Home />
+}
+
 export function AppSwitch() {
   return (
     <Switch>
       <Route exact path="/">
-        <Home />
+        <Main />
       </Route>
       <Route exact path="/about">
         <About />
