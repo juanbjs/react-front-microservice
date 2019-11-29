@@ -2,6 +2,22 @@
 
 This repository creates a front microservice project with React
 
+## Introduction
+
+In the public/index.html file of the main proyect, we add this code 
+
+```html
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
+  <script src="http://YOURIP:PORT/page1/main.js"></script>
+  <script src="http://YOURIP:PORT/page2/main.js"></script>
+  <script src="http://YOURIP:PORT/page3/main.js"></script>
+```
+
+In this code "<script src="http://YOURIP:PORT/page1/main.js"></script>", we make a reference with the microservice proyect.
+
+In the microservice proyect we make a customElements about our code.
+
 ## Installation
 
 ```git
