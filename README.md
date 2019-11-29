@@ -1,6 +1,6 @@
 # React-Front-Microservice
 
-This repository creates a Front Microservice with React
+This repository creates a front microservice project with React
 
 ## Installation
 
