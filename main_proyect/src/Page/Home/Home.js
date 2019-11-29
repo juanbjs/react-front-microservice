@@ -6,8 +6,10 @@ export function Home() {
   return (
     <Section>
       <div>
-        Pagina principal
-    </div>
+        <p>
+          {"Pagina principal"}
+        </p>
+      </div>
     </Section>
   )
 }

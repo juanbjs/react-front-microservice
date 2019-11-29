@@ -1,13 +1,14 @@
 {
-  "name": "about-page",
+  "name": "page_1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react-scripts": "3.0.0"
   },
   "scripts": {
-    "start": "npm run build && npm run copy",
-    "copy": "cp ./dist/* ../datos/nginx/www/about/dist/",
+    "start": "npm run build && npm run remove && npm run copy",
+    "remove": "rm -rf ../datos/nginx/www/page_1/dist/*",
+    "copy": "cp ./dist/* ../datos/nginx/www/page_1/dist/",
     "build": "webpack --mode development"
   },
   "eslintConfig": {

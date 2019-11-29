@@ -1,10 +1,24 @@
 version: '3'
 
 services:
-  about_page:
+  page_1:
       image: nginx:alpine
       ports:
         - 8070:80
       volumes:
         - ./datos/nginx/www:/var/www
-        - ./datos/nginx/conf:/etc/nginx/conf.d
+        - ./datos/nginx/conf/page_1.conf:/etc/nginx/conf.d/default.conf
+  page_2:
+      image: nginx:alpine
+      ports:
+        - 8071:80
+      volumes:
+        - ./datos/nginx/www:/var/www
+        - ./datos/nginx/conf/page_2.conf:/etc/nginx/conf.d/default.conf
+  page_3:
+      image: nginx:alpine
+      ports:
+        - 8072:80
+      volumes:
+        - ./datos/nginx/www:/var/www
+        - ./datos/nginx/conf/page_3.conf:/etc/nginx/conf.d/default.conf

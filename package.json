@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "npm run build_page_1 && npm run build_page_2 && npm run build_page_3",
+    "build_page_1": "cd page_1 && npm install && npm run start",
+    "build_page_2": "cd page_2 && npm install && npm run start",
+    "build_page_3": "cd page_3 && npm install && npm run start"
+  }
+}

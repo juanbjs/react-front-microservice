@@ -38,9 +38,19 @@ export function AppHeader() {
             {"Home"}
           </Typography>
         </NavLink>
-        <NavLink to="/About" className = {classes.navLink}>
+        <NavLink to="/page1" className = {classes.navLink}>
           <Typography variant="h6" className={classes.title}>
-            {"About"}
+            {"Page 1"}
+          </Typography>
+        </NavLink>
+        <NavLink to="/page2" className = {classes.navLink}>
+          <Typography variant="h6" className={classes.title}>
+            {"Page 2"}
+          </Typography>
+        </NavLink>
+        <NavLink to="/page3" className = {classes.navLink}>
+          <Typography variant="h6" className={classes.title}>
+            {"Page 3"}
           </Typography>
         </NavLink>
       </Toolbar>

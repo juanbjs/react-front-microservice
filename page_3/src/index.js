@@ -37,4 +37,4 @@ class ReactElement extends HTMLElement {
 
 }
 
-customElements.define('micro-front-about', ReactElement);
+customElements.define('micro-front-page3', ReactElement);

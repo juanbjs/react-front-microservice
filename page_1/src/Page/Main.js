@@ -4,7 +4,7 @@ export function Main(){
   return (
     <div>
       <p>
-        Hola desde React
+        Hola desde Page 1
       </p>
     </div>
   )

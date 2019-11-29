@@ -15,8 +15,20 @@ const removeComponent = (component) => {
   }
 }
 
-const About = () => {
-  const component = document.createElement('micro-front-about');
+const Page1 = () => {
+  const component = document.createElement('micro-front-page1');
+  appendComponent('react-container',component)
+  return <div></div>
+}
+
+const Page2 = () => {
+  const component = document.createElement('micro-front-page2');
+  appendComponent('react-container',component)
+  return <div></div>
+}
+
+const Page3 = () => {
+  const component = document.createElement('micro-front-page3');
   appendComponent('react-container',component)
   return <div></div>
 }
@@ -33,8 +45,14 @@ export function AppSwitch() {
       <Route exact path="/">
         <Main />
       </Route>
-      <Route exact path="/about">
-        <About />
+      <Route exact path="/page1">
+        <Page1 />
+      </Route>
+      <Route exact path="/page2">
+        <Page2 />
+      </Route>
+      <Route exact path="/page3">
+        <Page3 />
       </Route>
     </Switch>
   )
